@@ -11,9 +11,11 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var viewOutlet: UIView!
+    
     @IBOutlet var redValueLabel: UILabel!
     @IBOutlet var greenValueLabel: UILabel!
     @IBOutlet var blueValueLabel: UILabel!
+    
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
@@ -44,6 +46,7 @@ class ViewController: UIViewController {
         setViewBackgroundColor(view: viewOutlet)
     }
 }
+// MARK: - set view background color extention
 
 extension ViewController {
     
