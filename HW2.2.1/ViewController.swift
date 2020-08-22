@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        viewOutlet.layer.cornerRadius = viewOutlet.frame.width / 10
+        viewOutlet.layer.cornerRadius = 10
     }
     
     @IBAction func slidersAction() {
