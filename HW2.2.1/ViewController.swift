@@ -23,35 +23,27 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setViewBackgroundColor()
     }
     
     override func viewWillLayoutSubviews() {
         viewOutlet.layer.cornerRadius = viewOutlet.frame.width / 10
-        setViewBackgroundColor(view: viewOutlet)
     }
     
-    @IBAction func redSliderAction() {
+    @IBAction func slidersAction() {
         redValueLabel.text = String(Int(redSlider.value))
-        setViewBackgroundColor(view: viewOutlet)
-    }
-    
-    @IBAction func greenSliderAction() {
         greenValueLabel.text = String(Int(greenSlider.value))
-        setViewBackgroundColor(view: viewOutlet)
-    }
-    
-    @IBAction func blueSliderAction() {
         blueValueLabel.text = String(Int(blueSlider.value))
-        setViewBackgroundColor(view: viewOutlet)
+        setViewBackgroundColor()
     }
+ 
 }
 // MARK: - set view background color extention
 
 extension ViewController {
     
-    private func setViewBackgroundColor(view: UIView) {
-        view.layer.backgroundColor = .init(srgbRed: CGFloat(redSlider.value)/255,
+    private func setViewBackgroundColor() {
+        viewOutlet.layer.backgroundColor = .init(srgbRed: CGFloat(redSlider.value)/255,
                                            green: CGFloat(greenSlider.value)/255,
                                            blue: CGFloat(blueSlider.value)/255,
                                            alpha: 1.0)
